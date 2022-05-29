@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Home - MedaChain</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -29,16 +30,7 @@
         margin-top: 0;
       }
     </style>
-    <script>
-      $(document).ready(function () {
-        $(".dropdown").hover(function () {
-          var dropdownMenu = $(this).children(".dropdown-menu");
-          if (dropdownMenu.is(":visible")) {
-            dropdownMenu.parent().toggleClass("open");
-          }
-        });
-      });
-    </script>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -67,15 +59,7 @@
               <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-                  >Login</a
-                >
-                <div class="dropdown-menu">
-                  <a href="doctor.html" class="dropdown-item">Doctor</a>
-                  <a href="patient.html" class="dropdown-item">Patient</a>
-                </div>
-              </div>
+              <a id="Dash_Board" class="nav-link active" href="index.html">Dash-Board</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>
@@ -101,6 +85,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
             urna, dignissim nec auctor in, mattis vitae leo.
           </p>
+          <button class="btn btn-outline-light btn-lg" type="button">
+            Learn More
+          </button>
         </div>
       </section>
       <section class="clean-block clean-info dark">
@@ -221,7 +208,9 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
