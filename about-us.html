@@ -21,6 +21,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
     />
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css" />
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .dropdown-menu {
+        margin-top: 0;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -43,7 +61,15 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                  >Login</a
+                >
+                <div class="dropdown-menu">
+                  <a href="doctor.html" class="dropdown-item">Doctor</a>
+                  <a href="patient.html" class="dropdown-item">Patient</a>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="about-us.html">About Us</a>
