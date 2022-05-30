@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Register - MedaChain</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -29,16 +30,7 @@
         margin-top: 0;
       }
     </style>
-    <script>
-      $(document).ready(function () {
-        $(".dropdown").hover(function () {
-          var dropdownMenu = $(this).children(".dropdown-menu");
-          if (dropdownMenu.is(":visible")) {
-            dropdownMenu.parent().toggleClass("open");
-          }
-        });
-      });
-    </script>
+    
   </head>
 
   <body>
@@ -61,17 +53,6 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-                  >Login</a
-                >
-                <div class="dropdown-menu">
-                  <a href="doctor.html" class="dropdown-item">Doctor</a>
-                  <a href="patient.html" class="dropdown-item">Patient</a>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>
             </li>
             <li class="nav-item">
@@ -91,75 +72,75 @@
               urna, dignissim nec auctor in, mattis vitae leo.
             </p>
           </div>
-          <ul>
-            <button class="btn btn-primary" type="submit">Doctor</button>
-            <button class="btn btn-primary" type="submit">Patient</button>
-            <button class="btn btn-primary" type="submit">Agent</button>
+          <ul style="display:flex; justify-content: space-evenly; align-items: center; width:70%; margin: 10px auto;">
+            <button class="btn btn-primary" id="doctor" type="submit">Doctor</button>
+            <button class="btn btn-primary" id="patient" type="submit">Patient</button>
+            <button class="btn btn-primary" id="agent" type="submit">Agent</button>
           </ul>
           <form>
             <div class="Doctor" id="Doctor" style="display: none">
               <div class="mb-3">
-                <label class="form-label" for="name">Name</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Doctor-name">Name</label
+                ><input class="form-control item" type="text" id="Doctor-name" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Age</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Doctor-age">Age</label
+                ><input class="form-control item" type="text" id="Doctor-age" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Department</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Doctor-dep">Department</label
+                ><input class="form-control item" type="text" id="Doctor-dep" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Position</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Doctor-pos">Position</label
+                ><input class="form-control item" type="text" id="Doctor-pos" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Sex</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Doctor-sex">Sex</label
+                ><input class="form-control item" type="text" id="Doctor-sex" />
               </div>
             </div>
             <div class="Patient" id="Patient" style="display: none">
               <div class="mb-3">
-                <label class="form-label" for="name">Name</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Patient-name">Name</label
+                ><input class="form-control item" type="text" id="Patient-name" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Age</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Patient-age">Age</label
+                ><input class="form-control item" type="text" id="Patient-age" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Date of Birth</label
-                ><input class="form-control item" type="date" id="name" />
+                <label class="form-label" for="Patient-dob">Date of Birth</label
+                ><input class="form-control item" type="date" id="Patient-dob" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Sex</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Patient-sex">Sex</label
+                ><input class="form-control item" type="text" id="Patient-sex" />
               </div>
             </div>
-            <div class="Agent" id="Agent" style="display: block">
+            <div class="Agent" id="Agent" style="display: none">
               <div class="mb-3">
-                <label class="form-label" for="name">Name</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Agent-name">Name</label
+                ><input class="form-control item" type="text" id="Agent-name" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Age</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Agent-age">Age</label
+                ><input class="form-control item" type="text" id="Agent-age" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Sex</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Agent-sex">Sex</label
+                ><input class="form-control item" type="text" id="Agent-sex" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Location</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Agent-loc">Location</label
+                ><input class="form-control item" type="text" id="Agent-loc" />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="name">Agency Name</label
-                ><input class="form-control item" type="text" id="name" />
+                <label class="form-label" for="Agent-agency">Agency Name</label
+                ><input class="form-control item" type="text" id="Agent-agency" />
               </div>
             </div>
-            <button class="btn btn-primary" type="submit">Sign Up</button>
+            <p class="btn btn-primary" id="submit" type="submit">Sign Up</p>
           </form>
         </div>
       </section>
@@ -207,7 +188,10 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/register.js"></script>
   </body>
 </html>
