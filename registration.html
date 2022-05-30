@@ -30,7 +30,7 @@
         margin-top: 0;
       }
     </style>
-    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
 
   <body>
@@ -72,16 +72,34 @@
               urna, dignissim nec auctor in, mattis vitae leo.
             </p>
           </div>
-          <ul style="display:flex; justify-content: space-evenly; align-items: center; width:70%; margin: 10px auto;">
-            <button class="btn btn-primary" id="doctor" type="submit">Doctor</button>
-            <button class="btn btn-primary" id="patient" type="submit">Patient</button>
-            <button class="btn btn-primary" id="agent" type="submit">Agent</button>
+          <ul
+            style="
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              width: 70%;
+              margin: 10px auto;
+            "
+          >
+            <button class="btn btn-primary" id="doctor" type="submit">
+              Doctor
+            </button>
+            <button class="btn btn-primary" id="patient" type="submit">
+              Patient
+            </button>
+            <button class="btn btn-primary" id="agent" type="submit">
+              Agent
+            </button>
           </ul>
           <form>
             <div class="Doctor" id="Doctor" style="display: none">
               <div class="mb-3">
                 <label class="form-label" for="Doctor-name">Name</label
-                ><input class="form-control item" type="text" id="Doctor-name" />
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Doctor-name"
+                />
               </div>
               <div class="mb-3">
                 <label class="form-label" for="Doctor-age">Age</label
@@ -103,19 +121,35 @@
             <div class="Patient" id="Patient" style="display: none">
               <div class="mb-3">
                 <label class="form-label" for="Patient-name">Name</label
-                ><input class="form-control item" type="text" id="Patient-name" />
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Patient-name"
+                />
               </div>
               <div class="mb-3">
                 <label class="form-label" for="Patient-age">Age</label
-                ><input class="form-control item" type="text" id="Patient-age" />
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Patient-age"
+                />
               </div>
               <div class="mb-3">
                 <label class="form-label" for="Patient-dob">Date of Birth</label
-                ><input class="form-control item" type="date" id="Patient-dob" />
+                ><input
+                  class="form-control item"
+                  type="date"
+                  id="Patient-dob"
+                />
               </div>
               <div class="mb-3">
                 <label class="form-label" for="Patient-sex">Sex</label
-                ><input class="form-control item" type="text" id="Patient-sex" />
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Patient-sex"
+                />
               </div>
             </div>
             <div class="Agent" id="Agent" style="display: none">
@@ -137,7 +171,11 @@
               </div>
               <div class="mb-3">
                 <label class="form-label" for="Agent-agency">Agency Name</label
-                ><input class="form-control item" type="text" id="Agent-agency" />
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Agent-agency"
+                />
               </div>
             </div>
             <p class="btn btn-primary" id="submit" type="submit">Sign Up</p>
