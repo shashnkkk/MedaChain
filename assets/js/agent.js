@@ -17,11 +17,10 @@ background-size: cover;
 background-position: center;`
 
 const download_url = ()=>{
-    // let str = url.value;
-    let res = url.value;
-    // console.log(url.value);
-    // let res = str.replace("https://drive.google.com/file/d/", "https://drive.google.com/uc?export=view&id=");
-    // res = res.replace("/view?usp=sharing", "");
+    let str = url.value;
+    console.log(url.value);
+    let res = str.replace("https://drive.google.com/file/d/", "https://drive.google.com/uc?export=view&id=");
+    res = res.replace("/view?usp=sharing", "");
     console.log(res)
     contract.methods.verify(address_patient.value, res).send({from: account }, function (err, res1) {
         if (err) {
