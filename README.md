@@ -12,12 +12,12 @@ Some of the benefits of this system:-
 4. We've only scratched the surface of the iceberg here. If certain procedures or standards are properly enforced across an area, it is possible that many malpractices that would have occurred in the absence of this system will be eliminated.
 5. With this kind of growth potential, it also opens up a few new sectors, such as a single portal for all medical needs, such as hospital and doctor ratings, best hospital and doctor locations, and so on.
 
-//How our prototype works
+# How our prototype works
 
-> It has a front-end made using HTML, CSS and JavaScript
+> The front-end is designed using using HTML, CSS, Bootstrap and JavaScript
 > We’ve created and deployed a smart contract made in solidity on test block-chain network.
 > We’ve used web3js for connecting and communicating with the smart contract.
 > We’ve used meta-mask for account idetification and transaction purpose.
-> Ganache to create a local block-chain network for testing.
+> Ganache was used to create and deploy a local block-chain network for testing.
 
 Video Link:- [https://github.com/shashnkkk/MedaChain](https://drive.google.com/file/d/1XCoEQCuR9NxVyQhVwU6FUA0adx9zjXqI/view)
